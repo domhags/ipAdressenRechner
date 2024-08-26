@@ -27,14 +27,12 @@ public class Main {
         for (int i = 0; i < oktette.length; i++) {
             int teil = Integer.parseInt(oktette[i]);
 
-            // Direktes Speichern der Konvertierungen in den entsprechenden Arrays
             dezimal[i] = String.valueOf(teil);
             binaer[i] = String.format("%08d", Integer.parseInt(Integer.toBinaryString(teil)));
             oktal[i] = Integer.toOctalString(teil);
             hexadezimal[i] = String.format("%02X", teil);
         }
 
-        // Kombinieren der Oktette in eine komplette Adresse für jede Darstellungsform
         return new String[]{
                 String.join(".", dezimal),
                 String.join(".", binaer),
